@@ -1,0 +1,48 @@
+#Andres Medina  
+#COMP_SCI-101L
+#9/16/2021
+#Assignment 2
+
+name = input('Who are we calculating grades for? ==> ')
+
+lab = float(input('Enter the Labs grade? ==> '))
+if lab > 100:
+  print('The lab value should have been 100 or less.')
+elif lab < 0:
+  print('The lab value should have been 0 or more.')
+  
+exam = float(input('Enter the EXAMS grade? ==> '))
+if exam > 100:
+  print('The exam value should have been 100 or less.')
+elif exam < 0:
+  print('The exam value should have been 0 or more.')  
+
+attendance = float(input('Enter the Attendance grade? ==> '))
+if attendance > 100:
+  print('The attendance value should have been 100 or less.')
+elif attendance < 0:
+  print('The exam value should have been 0 or more.')
+
+weighted = float(lab + exam + attendance) / 3
+if weighted > 100:
+  print('The values have not been corrected to calculate the weighted value. Values are over 100.')
+elif weighted < 0:
+  print('The values have not been corrected to calculate the weighted value. Values are lower than 0.')
+elif weighted < 100:
+  print('The weighted grade for', name, 'is', weighted)
+elif weighted > 0:
+  print('The weighted grade for', name, 'is', weighted)
+
+def grade (weighted):
+    if float(weighted) >= 90:
+        print('has a letter grade of A') 
+    elif  80 <= float(weighted) < 90:
+        print('has a letter grade of B')
+    elif 70 <= float(weighted) < 80:
+        print('has a letter grade of C')
+    elif 60 <= float(weighted) < 70:
+        print('has a letter grade of D')
+    elif 60 > float(weighted):
+        print('has a letter grade of F')
+
+grade(weighted)
