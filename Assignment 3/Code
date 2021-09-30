@@ -1,5 +1,9 @@
-print("Welcome to the Flarsheim Gusser!\n")
+#Andres Medina  
+#COMP_SCI-101L
+#9/29/2021
+#Assignment 3
 
+print("Welcome to the Flarsheim Gusser!\n")
 
 while(True):
     print("Please think of a number between and including 1 and 100.\n")
