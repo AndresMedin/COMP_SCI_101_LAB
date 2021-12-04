@@ -1,0 +1,35 @@
+import turtle
+from random import randint
+screen = turtle.Screen()
+screen.bgcolor('black')
+
+turtle1 = turtle.Turtle()
+turtle1.color('green')
+turtle1.shape('turtle')
+turtle2 = turtle.Turtle()
+turtle2.color('purple')
+turtle2.shape('turtle')
+
+def move(x,y):
+    turtle1.forward(randint(10,15))
+    turtle2.forward(randint(10,15))  
+def main():
+    turtle1.penup()
+    turtle2.penup()
+    
+    turtle1.goto(-300,50)
+    turtle2.goto(-300,-50)
+    turtle1.pendown()
+    turtle2.pendown()
+    turtle1.write("turtle1", align="right")
+    turtle2.write("turtle2", align="right")
+    screen.onclick(move)
+    screen.mainloop()
+   
+    if((round(turtle1.xcor(), 5))<(round(turtle2.xcor(), 5))):
+        print("Turtel2 is winner")
+    elif((round(turtle1.xcor(), 5))>(round(turtle2.xcor(), 5))):
+        print("Turtel1 is winner")
+    else:
+        print("match draw")
+main()
