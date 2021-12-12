@@ -5,14 +5,15 @@
 import math
 
 def median(values:list):
-    values = sorted(values)
     length = len(values)
+    values = sorted(values)
+       
     if values == []:
         raise ValueError
     elif length % 2 == 0:
-        mid1 = int((length/2) - 1)
-        mid2 = int(length/2)
-        median = float(values[mid1] + values[mid2])/2
+        med1 = int((length/2) - 1)
+        med2 = int(length/2)
+        median = float(values[med1] + values[med2])/2
         return median
     else:
         median = values[int((length-1)/2)]
